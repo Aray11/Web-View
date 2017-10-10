@@ -1,14 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Yufid View Controller-->
+        <scene sceneID="fjN-g8-g0N">
+            <objects>
+                <viewController id="izr-ho-Tem" customClass="YufidViewController" customModule="Web_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nOG-xy-FP0"/>
+                        <viewControllerLayoutGuide type="bottom" id="RD2-tF-bYm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2tt-tR-iiV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qUy-9B-IlA">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JnX-4Q-Be0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="yufid.tv" id="KT0-Jd-caz">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="dtu-C2-wtt">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="modal" id="0bR-b5-Bmb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="qUy-9B-IlA" id="WVM-pK-Lpy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Htg-mk-uWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="-678"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Web_View" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +62,302 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download copy.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="eNW-hF-MKe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="Est-7i-Q2u"/>
+                                    <constraint firstAttribute="width" secondItem="eNW-hF-MKe" secondAttribute="height" multiplier="375:667" id="hgX-aX-MB8"/>
+                                    <constraint firstAttribute="width" constant="375" id="igk-PF-zt6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUp-El-2Va">
+                                <rect key="frame" x="191" y="383" width="184" height="48"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="3uZ-YD-sMc"/>
+                                    <constraint firstAttribute="height" constant="48" id="5Ds-ud-YGo"/>
+                                    <constraint firstAttribute="width" secondItem="TUp-El-2Va" secondAttribute="height" multiplier="23:6" id="Ypg-am-a48"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="radio muslim">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ejm-Ne-gJc" kind="modal" id="niS-ak-6Jx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUn-O4-7IG">
+                                <rect key="frame" x="0.0" y="475" width="184" height="48"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GUn-O4-7IG" secondAttribute="height" multiplier="23:6" id="Bla-TP-j8h"/>
+                                    <constraint firstAttribute="height" constant="48" id="vtt-pq-hUG"/>
+                                    <constraint firstAttribute="width" constant="184" id="yJj-43-QPh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Kisah islam">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4TK-Vx-7oK" kind="modal" id="qbq-2n-GF4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwZ-kR-hi5">
+                                <rect key="frame" x="0.0" y="91" width="184" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Nd9-tf-vDo"/>
+                                    <constraint firstAttribute="width" constant="184" id="W2j-Kt-aX2"/>
+                                    <constraint firstAttribute="width" secondItem="bwZ-kR-hi5" secondAttribute="height" multiplier="92:25" id="o22-2p-yy5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Yufid">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="izr-ho-Tem" kind="modal" id="Zzy-Je-blp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="so5-ER-e7n">
+                                <rect key="frame" x="0.0" y="283" width="184" height="48"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="29J-hn-gZp"/>
+                                    <constraint firstAttribute="width" secondItem="so5-ER-e7n" secondAttribute="height" multiplier="23:6" id="5zm-Wh-nu4"/>
+                                    <constraint firstAttribute="width" constant="184" id="Kj7-sb-uX8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Radio rodja">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="roo-gO-5cj" kind="modal" id="88i-4s-Ym4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wii-tF-evx">
+                                <rect key="frame" x="191" y="188" width="184" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="53t-1Y-bWG"/>
+                                    <constraint firstAttribute="width" constant="184" id="BbO-BH-Bs2"/>
+                                    <constraint firstAttribute="width" secondItem="Wii-tF-evx" secondAttribute="height" multiplier="92:25" id="IpG-fk-7oz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Kajian">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="H9U-Qk-glb" kind="modal" id="tu4-6J-tUZ"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lHP-rb-1wI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="IwK-g0-KKd"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bwZ-kR-hi5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3MC-YV-hbo"/>
+                            <constraint firstItem="TUp-El-2Va" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="191" id="P3T-NA-clc"/>
+                            <constraint firstAttribute="trailing" secondItem="so5-ER-e7n" secondAttribute="trailing" constant="191" id="PwI-ZS-guF"/>
+                            <constraint firstItem="GUn-O4-7IG" firstAttribute="top" secondItem="so5-ER-e7n" secondAttribute="bottom" constant="144" id="Rfw-Av-7kb"/>
+                            <constraint firstItem="GUn-O4-7IG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SwA-f2-umf"/>
+                            <constraint firstItem="so5-ER-e7n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UsM-dU-Eeq"/>
+                            <constraint firstAttribute="trailing" secondItem="GUn-O4-7IG" secondAttribute="trailing" constant="191" id="VyT-aK-gfs"/>
+                            <constraint firstAttribute="trailing" secondItem="TUp-El-2Va" secondAttribute="trailing" id="Wxr-Yu-38A"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GUn-O4-7IG" secondAttribute="bottom" constant="144" id="a0I-Xg-xdn"/>
+                            <constraint firstItem="eNW-hF-MKe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i2l-yS-3H7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TUp-El-2Va" secondAttribute="bottom" constant="236" id="kBE-Wa-g34"/>
+                            <constraint firstAttribute="trailing" secondItem="Wii-tF-evx" secondAttribute="trailing" id="kfw-wF-I1B"/>
+                            <constraint firstAttribute="trailing" secondItem="eNW-hF-MKe" secondAttribute="trailing" id="ovy-BJ-65E"/>
+                            <constraint firstItem="bwZ-kR-hi5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="71" id="p6j-kl-96b"/>
+                            <constraint firstItem="eNW-hF-MKe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pdG-yS-94l"/>
+                            <constraint firstItem="Wii-tF-evx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="191" id="qcU-Ki-6zX"/>
+                            <constraint firstItem="TUp-El-2Va" firstAttribute="top" secondItem="Wii-tF-evx" secondAttribute="bottom" constant="145" id="s2u-JX-ZRg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eNW-hF-MKe" secondAttribute="bottom" id="sIu-Hv-4V8"/>
+                            <constraint firstItem="Wii-tF-evx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="168" id="sSc-cb-lsl"/>
+                            <constraint firstAttribute="trailing" secondItem="bwZ-kR-hi5" secondAttribute="trailing" constant="191" id="vYW-US-Cjc"/>
+                            <constraint firstItem="so5-ER-e7n" firstAttribute="top" secondItem="bwZ-kR-hi5" secondAttribute="bottom" constant="142" id="yvG-mX-Ozh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--Web5 View Controller-->
+        <scene sceneID="Nao-86-alj">
+            <objects>
+                <viewController id="4TK-Vx-7oK" customClass="Web5ViewController" customModule="Web_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zhq-Ek-bnL"/>
+                        <viewControllerLayoutGuide type="bottom" id="cnm-lC-z1o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hfp-eB-Qot">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPd-Xm-ZOh">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3z4-qM-7nY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="kisahislam.net" id="vkN-aU-Uqv">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="ymD-J8-JLD">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="modal" id="b13-P9-5Hy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="pPd-Xm-ZOh" id="vtv-yE-E2T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qYu-Ro-1Ry" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-724" y="694.90254872563719"/>
+        </scene>
+        <!--Web4 View Controller-->
+        <scene sceneID="hTp-5C-i6T">
+            <objects>
+                <viewController id="ejm-Ne-gJc" customClass="Web4ViewController" customModule="Web_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AD2-BF-YbK"/>
+                        <viewControllerLayoutGuide type="bottom" id="cnm-gy-82i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vZu-5b-iIB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bhg-Eg-vJE">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOJ-O4-u8l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="radiomuslim.com" id="QOx-e1-8PO">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="tAz-It-8Ug">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="modal" id="bVF-HV-1Yb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Bhg-Eg-vJE" id="NI5-YM-tvc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxP-VG-iay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.60000000000002" y="694.90254872563719"/>
+        </scene>
+        <!--Lazada View Controller-->
+        <scene sceneID="eYX-RJ-ong">
+            <objects>
+                <viewController id="roo-gO-5cj" customClass="LazadaViewController" customModule="Web_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4rP-IQ-PBY"/>
+                        <viewControllerLayoutGuide type="bottom" id="T3n-OI-mBX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dvs-Pt-zmy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p0Z-5S-h0B">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4EF-Kl-P5y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="radiorodja.com" id="Nsr-rH-Dgi">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="0xt-C6-jrn">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="modal" id="feW-ge-au4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="p0Z-5S-h0B" id="k1v-vQ-1Pd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZH-6s-lIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-724" y="-116"/>
+        </scene>
+        <!--Web3 View Controller-->
+        <scene sceneID="tcy-Zh-Fay">
+            <objects>
+                <viewController id="H9U-Qk-glb" customClass="Web3ViewController" customModule="Web_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ise-SL-qUg"/>
+                        <viewControllerLayoutGuide type="bottom" id="c7G-Qt-SCP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I2d-EB-yB7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1BM-5R-pPH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="kajian.net" id="AlX-Bc-y62">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="rjo-ht-Zgb">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="modal" id="ad0-6C-pCQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Flk-Iv-8sh">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Flk-Iv-8sh" id="6mO-vN-kbB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rdj-4B-EoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.60000000000002" y="-116.49175412293854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="download copy.jpeg" width="284" height="177"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="feW-ge-au4"/>
+    </inferredMetricsTieBreakers>
 </document>

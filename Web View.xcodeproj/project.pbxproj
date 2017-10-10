@@ -14,6 +14,12 @@
 		FA0EF57D1F79E60E0052F187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0EF57B1F79E60E0052F187 /* LaunchScreen.storyboard */; };
 		FA0EF5881F79E60E0052F187 /* Web_ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF5871F79E60E0052F187 /* Web_ViewTests.swift */; };
 		FA0EF5931F79E60E0052F187 /* Web_ViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF5921F79E60E0052F187 /* Web_ViewUITests.swift */; };
+		FA0EF5A31F79EB280052F187 /* YufidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF5A21F79EB280052F187 /* YufidViewController.swift */; };
+		FA0EF5AB1F7A06ED0052F187 /* Web3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF5AA1F7A06ED0052F187 /* Web3ViewController.swift */; };
+		FA0EF5AD1F7A09BE0052F187 /* Web4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF5AC1F7A09BE0052F187 /* Web4ViewController.swift */; };
+		FA0EF5AF1F7A30470052F187 /* Web5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF5AE1F7A30470052F187 /* Web5ViewController.swift */; };
+		FA11B6E81F7E90A10046BEA7 /* LazadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11B6E71F7E90A10046BEA7 /* LazadaViewController.swift */; };
+		FA1C7D8D1F7B54E30065FCD9 /* download copy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FA1C7D8C1F7B54E30065FCD9 /* download copy.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		FA0EF58E1F79E60E0052F187 /* Web ViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Web ViewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0EF5921F79E60E0052F187 /* Web_ViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web_ViewUITests.swift; sourceTree = "<group>"; };
 		FA0EF5941F79E60E0052F187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0EF5A21F79EB280052F187 /* YufidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YufidViewController.swift; sourceTree = "<group>"; };
+		FA0EF5AA1F7A06ED0052F187 /* Web3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web3ViewController.swift; sourceTree = "<group>"; };
+		FA0EF5AC1F7A09BE0052F187 /* Web4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web4ViewController.swift; sourceTree = "<group>"; };
+		FA0EF5AE1F7A30470052F187 /* Web5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web5ViewController.swift; sourceTree = "<group>"; };
+		FA11B6E71F7E90A10046BEA7 /* LazadaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazadaViewController.swift; sourceTree = "<group>"; };
+		FA1C7D8C1F7B54E30065FCD9 /* download copy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "download copy.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,18 @@
 		FA0EF5711F79E60E0052F187 /* Web View */ = {
 			isa = PBXGroup;
 			children = (
+				FA1C7D8C1F7B54E30065FCD9 /* download copy.jpeg */,
 				FA0EF5721F79E60E0052F187 /* AppDelegate.swift */,
 				FA0EF5741F79E60E0052F187 /* ViewController.swift */,
 				FA0EF5761F79E60E0052F187 /* Main.storyboard */,
 				FA0EF5791F79E60E0052F187 /* Assets.xcassets */,
 				FA0EF57B1F79E60E0052F187 /* LaunchScreen.storyboard */,
 				FA0EF57E1F79E60E0052F187 /* Info.plist */,
+				FA0EF5A21F79EB280052F187 /* YufidViewController.swift */,
+				FA0EF5AA1F7A06ED0052F187 /* Web3ViewController.swift */,
+				FA0EF5AC1F7A09BE0052F187 /* Web4ViewController.swift */,
+				FA0EF5AE1F7A30470052F187 /* Web5ViewController.swift */,
+				FA11B6E71F7E90A10046BEA7 /* LazadaViewController.swift */,
 			);
 			path = "Web View";
 			sourceTree = "<group>";
@@ -233,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0EF57D1F79E60E0052F187 /* LaunchScreen.storyboard in Resources */,
+				FA1C7D8D1F7B54E30065FCD9 /* download copy.jpeg in Resources */,
 				FA0EF57A1F79E60E0052F187 /* Assets.xcassets in Resources */,
 				FA0EF5781F79E60E0052F187 /* Main.storyboard in Resources */,
 			);
@@ -260,6 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0EF5751F79E60E0052F187 /* ViewController.swift in Sources */,
+				FA0EF5AB1F7A06ED0052F187 /* Web3ViewController.swift in Sources */,
+				FA11B6E81F7E90A10046BEA7 /* LazadaViewController.swift in Sources */,
+				FA0EF5A31F79EB280052F187 /* YufidViewController.swift in Sources */,
+				FA0EF5AF1F7A30470052F187 /* Web5ViewController.swift in Sources */,
+				FA0EF5AD1F7A09BE0052F187 /* Web4ViewController.swift in Sources */,
 				FA0EF5731F79E60E0052F187 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +529,7 @@
 				FA0EF5991F79E60E0052F187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA0EF59A1F79E60E0052F187 /* Build configuration list for PBXNativeTarget "Web ViewTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +538,7 @@
 				FA0EF59C1F79E60E0052F187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA0EF59D1F79E60E0052F187 /* Build configuration list for PBXNativeTarget "Web ViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +547,7 @@
 				FA0EF59F1F79E60E0052F187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
